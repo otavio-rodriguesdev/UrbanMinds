@@ -1,6 +1,3 @@
 Flask
 requests
-geopandas
-rasterio
-numpy
 beautifulsoup4

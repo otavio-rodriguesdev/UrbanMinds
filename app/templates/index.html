@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanMinds - Análise Urbana Global com Dados da NASA</title>
+    <title>UrbanMinds - Análise Urbana Dinâmica com Dados da NASA</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
-        #map { height: calc(100vh - 80px); } /* O mapa ocupa a altura da janela */
-        .leaflet-control-geocoder-form input {
-            font-size: 14px;
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .legend { padding: 6px 10px; background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
+        body { font-family: 'Inter', sans-serif; }
+        #map { height: calc(100vh - 80px); cursor: crosshair; }
+        .legend { padding: 6px 10px; background: rgba(255, 255, 255, 0.9); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
         .legend img { width: 100%; }
+        .leaflet-container { background: #1a202c; }
+        .leaflet-popup-content-wrapper { border-radius: 8px; }
+        .leaflet-popup-content { font-size: 14px; line-height: 1.6; min-width: 200px; }
+        .popup-title { font-weight: bold; font-size: 16px; color: #1e40af; margin-bottom: 5px; }
+        .popup-data { font-weight: 600; }
+        .popup-loading { color: #555; }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -28,7 +30,7 @@
         <div class="flex items-center space-x-4">
             <span class="font-semibold text-slate-700">Selecione uma camada:</span>
             <select id="layer-selector" class="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                <option value="">Nenhuma</option>
+                <option value="none">Nenhuma</option>
                 <option value="heat">Temperatura de Superfície</option>
                 <option value="air">Poluição do Ar (NO₂)</option>
                 <option value="vegetation">Índice de Vegetação (NDVI)</option>
@@ -42,6 +44,6 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <script src="/static/main.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
