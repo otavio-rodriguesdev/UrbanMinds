@@ -1,40 +1,26 @@
-# Projeto UrbanMinds - NASA Space Apps Challenge
+UrbanMinds Project - NASA Space Apps Challenge
+Challenge: Data Pathways to Healthy Cities and Human Settlements
 
-**Desafio:** Data Pathways to Healthy Cities and Human Settlements
+UrbanMinds is a geospatial data visualization platform designed to allow anyone—from urban planners to curious citizens—to explore environmental indicators in any city around the world. Utilizing real-time data from the NASA GIBS (Global Imagery Browse Services) service, the tool offers a clear view of urban health without the need to download or process complex data.
 
-**UrbanMinds** é uma plataforma de visualização de dados geoespaciais projetada para permitir a qualquer pessoa—de planejadores urbanos a cidadãos curiosos—explorar indicadores ambientais em qualquer cidade do mundo. Utilizando dados em tempo real do serviço **NASA GIBS (Global Imagery Browse Services)**, a ferramenta oferece uma visão clara sobre a saúde urbana sem a necessidade de descarregar ou processar dados complexos.
+Analyzed Indicators
+The platform focuses on three critical issues for urban quality of life, using global and up-to-date NASA data:
 
-## Indicadores Analisados
+ Heat Islands: Visualization of Land Surface Temperature (LST).
 
-A plataforma foca em três questões críticas para a qualidade de vida urbana, com dados globais e atualizados da NASA:
+ Air Pollution: Analysis of Nitrogen Dioxide (NO₂) concentration.
 
-1.  **Ilhas de Calor:** Visualização da Temperatura de Superfície (LST).
-2.  **Poluição do Ar:** Análise da concentração de Dióxido de Nitrogénio (NO₂).
-3.  **Saúde da Vegetação:** Exploração do Índice de Vegetação (NDVI).
+ Vegetation Health: Exploration of the Normalized Difference Vegetation Index (NDVI).
 
-## Arquitetura da Solução (Frontend-Driven)
+Solution Architecture (Frontend-Driven)
+The new architecture is extremely lightweight and robust:
 
-A nova arquitetura é extremamente leve e robusta:
+Backend: A Flask (Python) micro-server with a single function: serving the main webpage (index.html).
 
-- **Backend:** Um micro-servidor **Flask** (Python) com uma única função: servir a página web principal (`index.html`).
-- **Frontend:** O coração da aplicação. Uma página única (SPA) construída com **HTML, TailwindCSS e JavaScript**.
-- **Mapa Interativo:** **Leaflet.js** é usado para a visualização.
-- **Pesquisa de Cidades:** A biblioteca **Leaflet Control Geocoder** com o provedor Nominatim (baseado em OpenStreetMap) permite a pesquisa de qualquer localidade.
-- **Dados da NASA:** Os dados não são descarregados. São consumidos em tempo real através do protocolo **WMS (Web Map Service)** do serviço **NASA GIBS**. Isto elimina a necessidade de scripts de download, processamento de dados e resolve permanentemente os erros de links quebrados.
+Frontend: The heart of the application. A single page application (SPA) built with HTML, TailwindCSS, and JavaScript.
 
-## Como Executar o Projeto
+Interactive Map: Leaflet.js is used for visualization.
 
-### Pré-requisitos
-- Python 3.8+
-- pip (gestor de pacotes do Python)
+City Search: The Leaflet Control Geocoder library with the Nominatim provider (based on OpenStreetMap) allows searching for any location.
 
-### 1. Configurar o Ambiente
-
-```bash
-# Clone o repositório e entre na pasta
-git clone <url-do-seu-repositorio>
-cd urbanminds
-
-# Crie e ative um ambiente virtual
-python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
+NASA Data: The data is not downloaded. It is consumed in real-time through the WMS (Web Map Service) protocol of the NASA GIBS service. This eliminates the need for download scripts, data processing, and permanently resolves broken link errors.

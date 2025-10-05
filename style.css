@@ -309,6 +309,10 @@ body {
     flex-direction: column;
 }
 
+.img-aurora {
+    padding-bottom: 10px;
+}
+
 .intro-text {
     font-size: 18px;
     line-height: 1.4;
@@ -358,6 +362,7 @@ body {
     font-size: 16px;
     color: #333;
     background-color: white; 
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .input-wrapper.large {
@@ -572,4 +577,11 @@ body {
     width: 15%;
     vertical-align: middle;
     align-items: center;
+}
+
+#resolution {
+    font-family: 'IBM Plex Sans', sans-serif; 
+    font-size: 16px; 
+    line-height: 1.6;
+    white-space: pre-wrap; 
 }

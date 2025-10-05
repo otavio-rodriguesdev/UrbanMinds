@@ -20,7 +20,7 @@
                 <ul>
                     <li><a href="#home" class="active">Home</a></li> 
                     <li><a href="#map">Interact Map</a></li>
-                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#feedback">Aurora</a></li>
                     <li><a href="#team">Team Members</a></li>
                 </ul>
             </nav>
@@ -63,8 +63,8 @@
                     </p>
                 </div>
                 <div class="map-grid">
-                    <div class="map-area"><a href="ferramenta_mapa/index.html"><img src="./imgs/demonstracao_mapa.png" alt=""></a>
-                    <div class="try-it-button"><a href="./ferramenta_mapa/index.html">Try It!</a></div>
+                    <div class="map-area"><a href="./mapainterativo.html"><img src="./imgs/demonstracao_mapa.png" alt=""></a>
+                    <div class="try-it-button"><a href="./mapainterativo.html">Try It!</a></div>
                     </div> 
 
                     <div class="indicators-section">
@@ -100,10 +100,14 @@
                 <div class="feedback-grid">
                     
                     <div class="input-section">
-                        <p class="intro-text">
+                        
+                        <div class="img-aurora">
                             <span><img src="./imgs/logo_aurora.PNG" alt="Aurora Logo" class="aurora-logo"></span>
+                        </div>
+                        <p class="intro-text">
                             Please provide information about your city and any Infrastructure issue so that we can create a resolution using our AI, Aurora.
                         </p>
+                       
 
                         <label for="location" class="input-label">Location (City, Country):</label>
                         <div class="input-wrapper">
@@ -120,7 +124,7 @@
                         <label for="resolution" class="input-label">Resolution:</label>
                         <textarea id="resolution" class="resolution-input-field" readonly></textarea>
                         
-                        <button class="send-button">SEND!</button>
+                        <button id="send-analysis-button" class="send-button">SEND!</button>
                     </div>
                 </div>
             </section>
@@ -188,18 +192,6 @@
                             <P class="member-function">Copywriter</P>
                         </div>
                     </div>
-
-                    <div class="team-member-card">
-                        <div class="profile-wrapper">
-                            <img src="./imgs/members/arinaldo_avatar.jpeg" alt="Arinaldo de Oliveira" class="profile-photo">
-                            <div class="indicator-icon flag-go"></div> </div>
-                        <div class="member-info">
-                            <p class="member-name">Arinaldo de Oliveira</p>
-                            <p class="member-name-surname"></p>
-                            <P class="member-function">Advisor</P>
-                        </div>
-                    </div>
-
                 </div>
             </section>
         </main>
@@ -211,10 +203,7 @@
         const sections = document.querySelectorAll('.content-area');
         // Seleciona todos os links de navegação
         const navLinks = document.querySelectorAll('.main-nav a');
-
-        // Configurações para o Intersection Observer
-        // 'rootMargin: -50% 0px -50% 0px' significa que o elemento só
-        // é considerado 'visível' quando estiver exatamente no meio da tela.
+        // ... (resto da lógica do Intersection Observer) ...
         const options = {
             root: null, // viewport
             rootMargin: "-50% 0px -50% 0px", // 50% de margem no topo e na base
@@ -223,19 +212,12 @@
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                // Se a seção está cruzando a linha do meio (ou seja, está 'ativa')
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.id;
-
-                    // 1. Remove a classe 'active' de todos os links
                     navLinks.forEach(link => {
                         link.classList.remove('active');
                     });
-
-                    // 2. Encontra o link correspondente usando o ID da seção
                     const activeLink = document.querySelector(`.main-nav a[href="#${sectionId}"]`);
-                    
-                    // 3. Adiciona a classe 'active' ao link correto
                     if (activeLink) {
                         activeLink.classList.add('active');
                     }
@@ -243,12 +225,13 @@
             });
         }, options);
 
-        // Observa cada uma das seções
         sections.forEach(section => {
             observer.observe(section);
         });
     });
 </script>
+
+<script src="./aurora.js"></script> 
 
 </body>
 </html>
