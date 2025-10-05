@@ -3,11 +3,8 @@
 import { Groq } from 'groq-sdk';
 
 const groq = new Groq({
-  // Voltando a usar o nome da variável de ambiente definido no .env
   apiKey: process.env.GROQ_API_KEY 
 });
-
-
 
 
 // This function should be the handler your server exposes
