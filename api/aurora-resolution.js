@@ -1,13 +1,13 @@
 
+
 import { Groq } from 'groq-sdk';
 
-const API_PART_A = "gsk_zlIJbTV6NRb4kv8gc0kKWGdyb3FYNbme";
-const API_PART_B = "dgqHZn4knd9yk7hFAmMw";
-
 const groq = new Groq({
-  // Use a concatenação das strings
-  apiKey: API_PART_A + API_PART_B 
+  // Voltando a usar o nome da variável de ambiente definido no .env
+  apiKey: process.env.GROQ_API_KEY 
 });
+
+
 
 
 // This function should be the handler your server exposes
