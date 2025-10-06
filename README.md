@@ -1,6 +1,6 @@
 # 🌍 UrbanMinds - Sustainable Urban Planning
 
-## 🚀 NASA Space Apps Challenge 2024: Data Pathways to Healthy Cities and Human Settlements
+## 🚀 NASA Space Apps Challenge 2025: Data Pathways to Healthy Cities and Human Settlements
 
 UrbanMinds is a **lightweight and powerful** platform for geospatial data visualization that makes critical urban environmental indicators accessible to everyone. By consuming data in **real-time** directly from the **NASA GIBS** (Global Imagery Browse Services) service, the project removes technical barriers, allowing urban planners and citizens to monitor their city's health instantly and efficiently.
 
