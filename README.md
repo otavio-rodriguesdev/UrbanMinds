@@ -53,8 +53,8 @@ The most robust feature of the architecture is that **no NASA data is downloaded
 | Resource | Status | Link |
 | :--- | :--- | :--- |
 | **webSite** | Online | [https://urban-minds.vercel.app/](https://urban-minds.vercel.app/) |
-| **Demonstration (Demo)** | Online | [https://drive.google.com/file/d/1dquMnPwRVWlvy0pmWCoasAWHULpU8VLU/view?usp=drivesdk](https://drive.google.com/file/d/1dquMnPwRVWlvy0pmWCoasAWHULpU8VLU/view?usp=drivesdk) |
-| **Presentation Slides** | Online | [https://drive.google.com/file/d/1idaTNwUAiM_2oZFjfogmBIc8rpV3MfWC/view?usp=drivesdk](https://drive.google.com/file/d/1idaTNwUAiM_2oZFjfogmBIc8rpV3MfWC/view?usp=drivesdk) |
+| **Demonstration (Demo)** | Online | [https://drive.google.com/file/d/1hhefUU8KDFDHzAde5PjhB9cSlRvTc4i1/view?usp=drivesdk](https://drive.google.com/file/d/1hhefUU8KDFDHzAde5PjhB9cSlRvTc4i1/view?usp=drivesdk) |
+| **Presentation Slides** | Online | [https://drive.google.com/file/d/1XUf8zDcA_Fi_sBJShc-qQSbzgolbmTGm/view?usp=drivesdk](https://drive.google.com/file/d/1XUf8zDcA_Fi_sBJShc-qQSbzgolbmTGm/view?usp=drivesdk) |
 | **Technical Documentation** | Online | [https://www.spaceappschallenge.org/2025/find-a-team/sat-sharks-analysis-team/?tab=details](https://www.spaceappschallenge.org/2025/find-a-team/sat-sharks-analysis-team/?tab=details) |
 
 ---
