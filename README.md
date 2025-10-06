@@ -68,3 +68,4 @@ This project was developed by the following members:
 * **[Diego Stoque]** - Developer
 * **[Mateus Maciel]** - Copywriter
 * **[Fellipe Gabriel]** - Designer
+* **[Arinaldo de Oliveira]** - Advisor
